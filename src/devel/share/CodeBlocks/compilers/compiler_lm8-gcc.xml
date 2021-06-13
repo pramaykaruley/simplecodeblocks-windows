@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE CodeBlocks_compiler>
+<CodeBlocks_compiler name="Simplecpp compiler"
+                     id="pramay"
+                     weight="2">
+    <Path type="master">
+        <Search envVar="PATH"
+                for="C"/>
+        <if platform="windows">
+            <Search path="C:\MinGW"/>
+            <Fallback path="C:\MinGW"/>
+        </if>
+        <else>
+            <Fallback path="/usr"/>
+        </else>
+    </Path>
+    <if platform="windows">
+        <Path type="include">
+            <Add><master/>\include</Add>
+        </Path>
+        <Path type="lib">
+            <Add><master/>\lib-mingw</Add>
+        </Path>
+    </if>
+    <else>
+        <Path type="include">
+            <Add><master/>/include</Add>
+        </Path>
+        <Path type="lib">
+            <Add><master/>/lib</Add>
+        </Path>
+    </else>
+</CodeBlocks_compiler>

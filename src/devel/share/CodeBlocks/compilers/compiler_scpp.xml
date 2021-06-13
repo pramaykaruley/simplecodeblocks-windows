@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE CodeBlocks_compiler>
+<CodeBlocks_compiler name="GNU GCC For Simplecpp"
+                     id="scpp"
+                     weight="1">
+    <Path type="master">
+        <Search envVar="PATH"
+                for="C"/>
+        <if platform="windows">
+            <Search path="%ProgramFiles%\MinGW"
+                    for="C"/>
+            <Fallback path="C:\MinGW"/>
+        </if>
+        <else>
+            <Fallback path="/usr"/>
+        </else>
+
+    </Path>
+    <Path type="include">
+        <Add><master/><separator/>include</Add>
+    </Path>
+    <Path type="lib">
+        <Add><master/><separator/>lib-mingw</Add>
+    </Path>
+    <if platform="windows">
+    	<Add lib="simplecpp"/>
+    	<Add lib="glfw3"/>
+    	<Add lib="gdi32"/>
+    	<Add lib="glew32s"/>
+    	<Add lib="glew32"/>
+    	<Add lib="SOIL"/>
+    	<Add lib="opengl32"/>
+    	<Add option="-std=c++17"/>
+    </if>
+    
+</CodeBlocks_compiler>
